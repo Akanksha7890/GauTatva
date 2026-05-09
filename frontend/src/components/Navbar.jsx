@@ -6,7 +6,7 @@ const Navbar = ({ language, setLanguage }) => {
 
   const content = {
     EN: {
-      brand: "Vedic Aroma",
+      brand: "GauTatva ",
       links: [
         { name: "Home", path: "/" },
         { name: "Products", path: "/products" },
@@ -15,7 +15,7 @@ const Navbar = ({ language, setLanguage }) => {
       callBtn: "Call Now"
     },
     HI: {
-      brand: "Vedic Aroma",
+      brand: "GauTatva ",
       links: [
         { name: "होम", path: "/" },
         { name: "प्रोडक्ट्स", path: "/products" },
@@ -57,7 +57,7 @@ const Navbar = ({ language, setLanguage }) => {
               {language === 'EN' ? 'हिन्दी' : 'English'}
             </button>
 
-            <a href="tel:9617015351" className="bg-orange-700 text-white px-6 py-2 rounded-full font-bold hover:bg-orange-800 shadow-md transform hover:scale-105 transition-all">
+            <a href="tel:9425175398" className="bg-orange-700 text-white px-6 py-2 rounded-full font-bold hover:bg-orange-800 shadow-md transform hover:scale-105 transition-all">
               {current.callBtn}
             </a>
           </div>
@@ -77,7 +77,7 @@ const Navbar = ({ language, setLanguage }) => {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-b border-orange-100 p-4 space-y-4">
           {current.links.map((link) => (
-            <Link key={link.path} to={link.path} onClick={() => setIsMenuOpen(false)} className="block text-orange-950 font-black text-2xl uppercase tracking-tighter">
+            <Link key={link.path} to={link.path} onClick={() => setIsMenuOpen(false)} className="block text-orange-950 font-black text-2xl uppercase tracking-tighter">+
               {link.name}
             </Link>
           ))}

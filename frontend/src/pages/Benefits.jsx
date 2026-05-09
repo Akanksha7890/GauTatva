@@ -3,7 +3,7 @@ import React from 'react';
 const Benefits = ({ language }) => {
   const content = {
     EN: {
-      title: "Why Choose Vedic Aroma?",
+      title: "Why Choose GauTatva ?",
       subtitle: "The Science and Spirit Behind Our Tradition",
       sciTitle: "Scientific Benefits",
       spiTitle: "Spiritual Benefits",
@@ -39,7 +39,7 @@ const Benefits = ({ language }) => {
       ]
     },
     HI: {
-      title: "वैदिक अरोमा ही क्यों?",
+      title: "गौ तत्व ही क्यों?",
       subtitle: "हमारी परंपरा के पीछे का विज्ञान और आध्यात्म",
       sciTitle: "वैज्ञानिक लाभ (Scientific)",
       spiTitle: "आध्यात्मिक लाभ (Spiritual)",
@@ -128,7 +128,7 @@ const Benefits = ({ language }) => {
           <div className="absolute top-0 right-0 w-32 h-32 bg-orange-800 rounded-full -mr-16 -mt-16 opacity-50"></div>
           <h3 className="text-3xl font-bold mb-4 relative z-10">{current.orderText}</h3>
           <p className="mb-8 text-orange-200 text-lg">100% Pure & Traditional</p>
-          <a href="tel:9617015351" className="inline-block bg-white text-orange-950 px-12 py-4 rounded-full font-black text-xl hover:bg-orange-50 transition-all transform hover:scale-105 shadow-xl">
+          <a href="tel:9425175398" className="inline-block bg-white text-orange-950 px-12 py-4 rounded-full font-black text-xl hover:bg-orange-50 transition-all transform hover:scale-105 shadow-xl">
             📞 {current.callBtn}
           </a>
         </div>

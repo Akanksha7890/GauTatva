@@ -5,6 +5,7 @@ import ProductPage from './pages/ProductPage';
 import Benefits from './pages/Benefits';
 import ProductDetail from './pages/ProductDetail';
 
+
 function App() {
   const [language, setLanguage] = useState('HI');
 
@@ -21,7 +22,7 @@ function App() {
         <nav className="flex justify-between items-center px-4 md:px-8 py-4 border-b w-full bg-white sticky top-0 z-50">
           {/* ब्रांड नेम: अब यह लिंक नहीं है, सिर्फ सुंदर टेक्स्ट है */}
           <div className="text-lg md:text-xl font-bold text-orange-950 tracking-tight">
-            Vedic Aroma
+            GauTatva 
           </div>
           
           <div className="flex gap-3 md:gap-6 items-center">
@@ -80,7 +81,7 @@ function App() {
         {/* 3. Footer (Optional) */}
         <footer className="py-6 text-center border-t border-stone-100 bg-stone-50">
            <p className="text-[10px] text-stone-400 font-bold uppercase tracking-widest">
-             © 2026 Vedic Aroma
+             © 2026 GauTatva 
            </p>
         </footer>
 

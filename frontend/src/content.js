@@ -1,6 +1,6 @@
 export const content = {
   en: {
-    navTitle: "Vedic Aroma",
+    navTitle: "GauTatva ",
     heroTitle: "Handmade Vedic Purity",
     scientificTitle: "Scientific Benefits",
     spiritualTitle: "Spiritual Benefits",

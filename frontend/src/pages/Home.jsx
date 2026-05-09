@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Hero from '../assets/Hero.png';
-
+import cow from '../assets/cow.jpg';
+import ImageSlider from '../components/ImageSlider';
 const Home = ({ language }) => {
   const content = {
     EN: {
@@ -9,12 +11,19 @@ const Home = ({ language }) => {
       title: "Handmade Vedic Kande for a Positive Home",
       desc: "Specially crafted to remove negative energy and bring spiritual peace. 100% natural and chemical-free.",
       // btn text removed as button is deleted
-      owner: "Brand by: Vedic Aroma",
-
+      btnText: "Order via Call",
+      btnProducts: "Explore Products",
+     
       // Detailed Info Sections
       powerTitle: "The Science of Sacred Elements",
       powerSubtitle: "Deep Scientific Roots & Environmental Protection",
-      
+compareTitle: "How our Vedic Kande stand out from ordinary chemical products",
+comparison: [
+  { feature: "Primary Source", ordinary: "Harmful Wax & Synthetic Chemicals", vedic: "Desi Cow Dung & 25+ Vedic Herbs" },
+  { feature: "Respiratory Safety", ordinary: "Causes Eye Irritation & Chest Congestion", vedic: "Purifies Air & Boosts Oxygen Levels" },
+  { feature: "Bacteria Defense", ordinary: "Zero effectiveness against germs", vedic: "Kills 90% Airborne Bacteria naturally" },
+  { feature: "Energy Level", ordinary: "Only masks bad odors for a while", vedic: "Cleanses Home Aura & Removes Vastu Dosh" }
+],
       sections: [
         {
           head: "The Bio-Purifying Force (Gobar)",
@@ -50,7 +59,7 @@ const Home = ({ language }) => {
             "Ethical Sourcing: Supports traditional Gaushalas.",
             "Pure Purity: Essence of holy rivers in your home."
           ],
-          theme: "blue"
+           theme: "blue"
         }
       ],
 
@@ -68,11 +77,17 @@ const Home = ({ language }) => {
       title: "सकारात्मक ऊर्जा के लिए शुद्ध वैदिक कंडे",
       desc: "नकारात्मक ऊर्जा को दूर करने और आध्यात्मिक शांति लाने के लिए विशेष रूप से निर्मित। 100% प्राकृतिक और रसायन मुक्त।",
       // btn text removed as button is deleted
-      owner: "ब्रांड: वैदिक अरोमा",
-
+      btnText: "आर्डर करें",
+      btnProducts: "प्रोडक्ट्स देखें",
       powerTitle: "पवित्र तत्वों का विज्ञान",
       powerSubtitle: "गहन वैज्ञानिक आधार और पर्यावरण संरक्षण",
-      
+compareTitle: "हमारे वैदिक कंडे साधारण केमिकल उत्पादों से बेहतर कैसे हैं",
+comparison: [
+  { feature: "मुख्य स्रोत", ordinary: "हानिकारक मोम और सिंथेटिक केमिकल", vedic: "देशी गाय का गोबर और 25+ वैदिक जड़ी-बूटियाँ" },
+  { feature: "श्वसन सुरक्षा", ordinary: "आंखों में जलन और भारीपन पैदा करता है", vedic: "हवा को शुद्ध कर ऑक्सीजन का स्तर बढ़ाता है" },
+  { feature: "कीटाणु रक्षा", ordinary: "कीटाणुओं पर कोई असर नहीं होता", vedic: "90% तक हवा के कीटाणुओं को नष्ट करता है" },
+  { feature: "ऊर्जा का स्तर", ordinary: "केवल कुछ समय के लिए दुर्गंध छिपाता है", vedic: "घर की ओरा शुद्ध कर वास्तु दोष दूर करता है" }
+],
       sections: [
         {
           head: "प्राकृतिक शोधक शक्ति (गोबर)",
@@ -140,9 +155,34 @@ const Home = ({ language }) => {
             
             {/* Call Button removed from here */}
             
-            <div className="pt-6 flex justify-center lg:justify-start items-center gap-2 border-t border-stone-100 mt-10">
-              <span className="italic text-stone-500 font-serif text-lg">{curr.owner}</span>
-            </div>
+{/* --- यहाँ से बटन वापस जोड़ा गया है --- */}
+<motion.div 
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.5 }}
+  /* gap-6 बटन के बीच की दूरी बढ़ा देगा और sm:flex-row उन्हें एक लाइन में रखेगा */
+  className="flex flex-col sm:flex-row items-center gap-6 pt-8"
+>
+  {/* Order Button (Primary) */}
+  <a 
+    href="tel:9425175398" 
+    className="w-full sm:w-[240px] h-[60px] flex items-center justify-center gap-3 bg-orange-900 text-white rounded-xl font-black text-lg shadow-md hover:bg-orange-950 transition-all active:scale-95 uppercase tracking-tighter"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    {curr.btnText}
+  </a>
+
+  {/* Products Button (Secondary) - Fixed Size to match Order Button */}
+  <Link 
+    to="/products" 
+    className="w-full sm:w-[240px] h-[60px] flex items-center justify-center gap-2 bg-white border-[3px] border-orange-900 text-orange-900 rounded-xl font-black text-lg hover:bg-orange-50 transition-all active:scale-95 uppercase tracking-tighter shadow-sm"
+  >
+    {curr.btnProducts}
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+  </Link>
+</motion.div>
+{/* --- बटन यहाँ खत्म होता है --- */}
+            
           </motion.div>
 
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3, duration: 0.8 }} className="relative group">
@@ -167,7 +207,21 @@ const Home = ({ language }) => {
           </motion.div>
         </div>
       </section>
+{/* --- GALLERY SLIDER SECTION --- */}
+<section className="py-16 px-6 bg-white border-b border-stone-100 overflow-hidden">
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-10">
+      <span className="text-orange-700 font-bold uppercase tracking-widest text-xs">
+        {language === 'HI' ? 'हमारे उत्पाद' : 'Our Products'}
+      </span>
+      <h2 className="text-4xl font-serif text-stone-900 mt-2">
+        {language === 'HI' ? 'शुद्धता की झलक' : 'A Glimpse of Purity'}
+      </h2>
+    </div>
 
+    <ImageSlider />
+  </div>
+</section>
       {/* --- SECTION 2: THE SCIENTIFIC & SPIRITUAL JOURNEY --- */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -211,11 +265,59 @@ const Home = ({ language }) => {
                     </ul>
                   </div>
                 </div>
+                
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+      {/* --- NEW SECTION 3: COMPARISON (क्लाइंट की डिमांड के अनुसार) --- */}
+<section className="py-24 px-6 bg-[#F9F7F4] border-t border-stone-100">
+  <div className="max-w-5xl mx-auto">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-serif text-stone-900 mb-4">{curr.compareTitle}</h2>
+      <p className="text-orange-800 font-bold uppercase tracking-widest text-xs">{curr.compareSubtitle}</p>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-8 items-stretch">
+      {/* Ordinary Product Box */}
+      <motion.div 
+        className="bg-white/50 p-8 rounded-[2rem] border border-orange-600"
+      >
+        <h3 className="text-center  text-orange-900 font-black uppercase tracking-[0.2em] text-sm mb-8">Ordinary Products</h3>
+        <div className="space-y-8">
+          {curr.comparison.map((item, idx) => (
+            <div key={idx} className="space-y-2">
+              <p className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">{item.feature}</p>
+              <p className="text-sm text-stone- font-bold flex gap-2">
+                <span className="text-red-600 font-bold">✕</span> {item.ordinary}
+              </p>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* GauTatva  Box (Highlighted) */}
+      <motion.div 
+        whileHover={{ scale: 1.02 }}
+        className="bg-white p-8 rounded-[2rem] border-2 border-orange-600 shadow-xl relative"
+      >
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-600 text-white text-[10px] font-black px-6 py-1.5 rounded-full uppercase tracking-tighter">Recommended</div>
+        <h3 className="text-center text-orange-900 font-black uppercase tracking-[0.2em] text-sm mb-8">GauTatva  Kande</h3>
+        <div className="space-y-8">
+          {curr.comparison.map((item, idx) => (
+            <div key={idx} className="space-y-2">
+              <p className="text-[10px] font-bold text-orange-800 uppercase tracking-widest">{item.feature}</p>
+              <p className="text-sm text-stone-900 font-bold flex gap-2">
+                <span className="text-emerald-500 font-bold">✓</span> {item.vedic}
+              </p>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+    </div>
+  </div>
+</section>
 
       {/* --- NEW SATTVIK ECO-PROTECTION SECTION: THE DIVINE CYCLE --- */}
       <section className="py-28 px-6 bg-[#FEF9F1] text-stone-900 rounded-t-[5rem] relative overflow-hidden border-t-2 border-orange-100">
@@ -253,6 +355,7 @@ const Home = ({ language }) => {
 
               <motion.div 
                 whileHover={{ x: -10, scale: 1.02 }}
+
                 className="p-8 bg-white border border-emerald-100 shadow-sm rounded-r-none rounded-l-[2rem]"
               >
                 <div className="flex gap-4 items-center mb-4 border-b border-emerald-50 pb-3">
@@ -271,9 +374,16 @@ const Home = ({ language }) => {
             <div className="lg:col-span-4 flex justify-center order-1 lg:order-2 py-12 lg:py-0 relative">
               <div className="relative">
                 {/* Main Figure */}
-                <div className="w-64 h-64 md:w-80 md:h-80 bg-white shadow-2xl rounded-full flex items-center justify-center border-4 border-emerald-50 relative z-20">
-                  <span className="text-8xl md:text-9xl filter drop-shadow-lg">🐄</span>
-                </div>
+<div className="w-64 h-64 md:w-80 md:h-80 bg-white shadow-2xl rounded-full flex items-center justify-center border-4 border-emerald-50 relative z-20 overflow-hidden">
+  <img 
+    src={cow} 
+    alt="Vedic Cow" 
+    /* object-contain इमेज को कटने से बचाएगा */
+    /* scale-125 बाहरी बॉर्डर को छुपाने के लिए पर्याप्त ज़ूम देगा */
+    /* translate-x-[-10px] इमेज को थोड़ा बाईं ओर खिसकाएगा ताकि पिछला पैर न कटे */
+    className="w-full h-full object-contain scale-[1.35] -translate-x-1" 
+  />
+</div>
                 
                 {/* Animated Circle */}
                 <motion.div 
