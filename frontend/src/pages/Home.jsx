@@ -149,7 +149,7 @@ comparison: [
         
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="space-y-8 text-center lg:text-left">
-            <span className="inline-block px-4 py-1.5 bg-orange-100 text-orange-900 text-xs font-bold tracking-[0.2em] rounded-full uppercase shadow-inner">{curr.tagline}</span>
+            <span className="inline-block px-4 py-1.5 bg-orange-100 text-orange-900 text-xs font-bold  rounded-full uppercase shadow-inner">{curr.tagline}</span>
             <h1 className="text-5xl lg:text-7xl font-serif leading-tight text-stone-950 tracking-tight">{curr.title}</h1>
             <p className="text-lg text-stone-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">{curr.desc}</p>
             
@@ -208,18 +208,24 @@ comparison: [
         </div>
       </section>
 {/* --- GALLERY SLIDER SECTION --- */}
-<section className="py-16 px-6 bg-white border-b border-stone-100 overflow-hidden">
+<section className="py-16 px-4 md:px-6 bg-white border-b border-stone-100 overflow-hidden">
   <div className="max-w-7xl mx-auto">
+    
     <div className="text-center mb-10">
-      <span className="text-orange-700 font-bold uppercase tracking-widest text-xs">
+      <span className="text-orange-700 font-bold uppercase text-xl">
         {language === 'HI' ? 'हमारे उत्पाद' : 'Our Products'}
       </span>
+
       <h2 className="text-4xl font-serif text-stone-900 mt-2">
         {language === 'HI' ? 'शुद्धता की झलक' : 'A Glimpse of Purity'}
       </h2>
     </div>
 
-    <ImageSlider />
+    {/* Slider Wrapper */}
+    <div className="w-full md:w-[75%] lg:w-[60%] mx-auto">
+      <ImageSlider />
+    </div>
+
   </div>
 </section>
       {/* --- SECTION 2: THE SCIENTIFIC & SPIRITUAL JOURNEY --- */}
@@ -227,7 +233,7 @@ comparison: [
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20 space-y-4">
             <h2 className="text-4xl md:text-6xl font-serif">{curr.powerTitle}</h2>
-            <p className="text-orange-700 font-bold uppercase tracking-widest text-xs">{curr.powerSubtitle}</p>
+            <p className="text-orange-700 font-bold uppercase  text-xl">{curr.powerSubtitle}</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-10">

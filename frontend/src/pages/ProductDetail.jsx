@@ -7,6 +7,7 @@ import piraamid from '../assets/piraamid.png';
 import malaa from '../assets/malaa.png';
 import footrest from '../assets/footrest.png';
 import Khaad from '../assets/Khaad.png';
+import ghee from '../assets/ghee.png';
 
 const ProductDetail = ({ language }) => {
   const { productId } = useParams();
@@ -201,7 +202,45 @@ const ProductDetail = ({ language }) => {
       howToUse: language === 'HI'
         ? "गमले में मिट्टी के साथ 30% खाद मिलाएं। सप्ताह में एक बार 1 चम्मच खाद पौधे की जड़ों के पास डालें। पानी देने से पहले मिट्टी में हल्का मिला दें।"
         : "Mix 30% manure with pot soil. Add 1 teaspoon near plant roots once a week. Lightly mix into soil before watering."
-    }
+    },
+    6: {
+  name:    language === 'HI' ? "A2 बिलोना घी"                  : "A2 Bilona Ghee",
+  img:     ghee,
+  tagline: language === 'HI' ? "अमृत समान, शुद्ध और पोषक"      : "Pure, Sacred & Deeply Nourishing",
+
+  importance: language === 'HI'
+    ? "आयुर्वेद में देशी गाय के घी को 'अमृत' कहा गया है। बिलोना विधि से बना घी सबसे शुद्ध और पोषक होता है — इसमें दही को मथकर माखन निकाला जाता है, फिर उसे धीमी आंच पर पकाया जाता है। यह केवल भोजन नहीं, एक संपूर्ण औषधि है।"
+    : "Ayurveda calls desi cow ghee 'Amrit' (nectar). Bilona method ghee is the purest form — curd is churned to extract butter, then slow-cooked on low flame. It is not just food — it is complete medicine.",
+
+  scientific: language === 'HI' ? [
+    "ब्यूटिरिक एसिड: देशी घी में 'Butyric Acid' होता है जो आंतों की दीवार को मजबूत करता है और पाचन तंत्र को पूरी तरह स्वस्थ रखता है।",
+    "CLA (Conjugated Linoleic Acid): यह तत्व शरीर की अनावश्यक चर्बी कम करता है, कैंसर रोधी गुण रखता है और रोग प्रतिरोधक क्षमता बढ़ाता है।",
+    "विटामिन A, D, E, K2: ये fat-soluble विटामिन आंखों, हड्डियों, त्वचा और हृदय के लिए अत्यंत आवश्यक हैं।",
+    "High Smoke Point (250°C): देशी घी उच्च तापमान पर भी toxic नहीं होता — refined oil के विपरीत जलने पर free radicals नहीं छोड़ता।"
+  ] : [
+    "Butyric Acid: A2 Bilona ghee contains Butyric Acid that strengthens the intestinal wall and keeps the digestive system completely healthy.",
+    "CLA (Conjugated Linoleic Acid): Reduces excess body fat, has anti-cancer properties, and boosts immunity.",
+    "Vitamins A, D, E, K2: These fat-soluble vitamins are essential for eyes, bones, skin, and heart health.",
+    "High Smoke Point (250°C): Desi ghee doesn't become toxic at high temperatures — unlike refined oils, it releases no free radicals when heated."
+  ],
+
+  spiritual: language === 'HI' ? [
+    "हवन और यज्ञ में घी की आहुति से वातावरण में ऑक्सीजन और ओजोन का स्तर बढ़ता है — यह वैज्ञानिक रूप से सिद्ध है।",
+    "घर में घी का दीपक जलाने से नकारात्मक ऊर्जा दूर होती है और माँ लक्ष्मी का आगमन होता है।",
+    "आयुर्वेद के अनुसार, रात को सोने से पहले नाक में 2 बूंद घी डालने से ('नस्य') मस्तिष्क शांत होता है और गहरी नींद आती है।",
+    "घी को 'सात्विक आहार' माना जाता है — इसके सेवन से मन शुद्ध, बुद्धि तीव्र और आत्मा प्रसन्न रहती है।"
+  ] : [
+    "Offering ghee in Havan/Yagya scientifically increases oxygen and ozone levels in the surrounding atmosphere.",
+    "Lighting a ghee lamp at home removes negative energy and invites prosperity and Goddess Lakshmi.",
+    "Ayurveda recommends 'Nasya' — 2 drops of ghee in each nostril before sleeping — for deep sleep and a calm mind.",
+    "Ghee is considered 'Sattvic food' — its consumption purifies the mind, sharpens intellect, and uplifts the soul."
+  ],
+
+  howToUse: language === 'HI'
+    ? "रोज सुबह खाली पेट 1 चम्मच गर्म पानी के साथ लें। खाना बनाते समय refined oil की जगह घी उपयोग करें। रात को सोने से पहले 1 चम्मच गर्म दूध में मिलाकर पिएं। हवन और दीपक के लिए भी उपयोग करें।"
+    : "Take 1 teaspoon with warm water every morning on an empty stomach. Use instead of refined oil while cooking. Mix 1 teaspoon in warm milk before sleeping. Also ideal for Havan and lighting lamps."
+},
+    
   };
 
   const product = productData[productId];
@@ -238,17 +277,17 @@ const ProductDetail = ({ language }) => {
 
           {/* Name + Tagline + Importance */}
           <div className="flex flex-col justify-center pt-2">
-            <span className="text-orange-600 text-[10px] font-black uppercase tracking-[0.25em] mb-2">GauTatva Exclusive</span>
+            
             <h1 className="text-3xl md:text-5xl font-bold text-orange-950 mb-3 tracking-tight leading-tight">
               {product.name}
             </h1>
-            <p className="text-orange-500 font-bold text-sm uppercase tracking-widest mb-6">
+            <p className="text-orange-500 font-bold text-sm uppercase  mb-6">
               {product.tagline}
             </p>
 
             {/* Importance Box */}
             <div className="bg-orange-50 border-l-4 border-orange-400 rounded-r-2xl p-5 mb-6">
-              <h3 className="flex items-center gap-2 text-[10px] font-black text-orange-800 uppercase tracking-widest mb-3">
+              <h3 className="flex items-center gap-2 text-[15px] font-black text-orange-800 uppercase mb-3">
                 <Shield size={13} />
                 {language === 'HI' ? 'महत्व एवं परिचय' : 'Importance & Introduction'}
               </h3>
@@ -259,7 +298,7 @@ const ProductDetail = ({ language }) => {
 
             {/* How to Use */}
             <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
-              <h3 className="text-[10px] font-black text-emerald-800 uppercase tracking-widest mb-2">
+              <h3 className="text-[12px] font-black text-emerald-800 uppercase  mb-2">
                 🌿 {language === 'HI' ? 'उपयोग कैसे करें' : 'How to Use'}
               </h3>
               <p className="text-emerald-900 text-sm leading-relaxed font-medium">
@@ -274,7 +313,7 @@ const ProductDetail = ({ language }) => {
 
           {/* Scientific Benefits */}
           <div className="bg-white border border-blue-100 rounded-3xl p-6 md:p-8 shadow-sm">
-            <h3 className="flex items-center gap-2 text-[10px] font-black text-blue-800 uppercase tracking-widest mb-6 border-b border-blue-50 pb-3">
+            <h3 className="flex items-center gap-2 text-[13px] font-black text-blue-800 uppercase  mb-6 border-b border-blue-50 pb-3">
               <FlaskConical size={14} />
               {language === 'HI' ? 'वैज्ञानिक तथ्य एवं लाभ' : 'Scientific Facts & Benefits'}
             </h3>
@@ -290,7 +329,7 @@ const ProductDetail = ({ language }) => {
 
           {/* Spiritual Benefits */}
           <div className="bg-white border border-orange-100 rounded-3xl p-6 md:p-8 shadow-sm">
-            <h3 className="flex items-center gap-2 text-[10px] font-black text-orange-800 uppercase tracking-widest mb-6 border-b border-orange-50 pb-3">
+            <h3 className="flex items-center gap-2 text-[12px] font-black text-orange-800 uppercase  mb-6 border-b border-orange-50 pb-3">
               <Sparkles size={14} />
               {language === 'HI' ? 'आध्यात्मिक एवं धार्मिक लाभ' : 'Spiritual & Religious Benefits'}
             </h3>
@@ -309,7 +348,7 @@ const ProductDetail = ({ language }) => {
         {/* CTA Strip */}
         <div className="mt-10 bg-orange-900 rounded-[2rem] p-7 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
           <div>
-            <p className="text-orange-300 text-xs font-black uppercase tracking-widest mb-1">
+            <p className="text-orange-300 text-xl font-black uppercase mb-1">
               {language === 'HI' ? 'ऑर्डर करें' : 'Place Your Order'}
             </p>
             <h3 className="text-white text-xl md:text-2xl font-bold">

@@ -82,7 +82,7 @@ const Navbar = ({ language, setLanguage }) => {
             </Link>
           ))}
           <button onClick={() => {setLanguage(language === 'EN' ? 'HI' : 'EN'); setIsMenuOpen(false)}} className="w-full text-left py-2 text-orange-800 font-bold border-t">
-             {language === 'EN' ? 'हिन्दी में बदलें' : 'Switch to English'}
+             {language === 'HN' ? 'हिन्दी में बदलें' : 'Switch to English'}
           </button>
         </div>
       )}

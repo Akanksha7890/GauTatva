@@ -6,6 +6,7 @@ import malaa from '../assets/malaa.png';
 import Khaad from '../assets/Khaad.png';
 import footrest from '../assets/footrest.png';
 import packs from '../assets/packs.png';
+import ghee from '../assets/ghee.png'; // apna actual filename check karo
 
 const ProductPage = ({ language }) => {
   const navigate = useNavigate();
@@ -23,20 +24,22 @@ const ProductPage = ({ language }) => {
       contactLabel: "Get In Touch",
       subText: "GauTatva Family",
       ctaText: "Call directly to place your order or for more info",
+      gauShala: "Radhe Radhe Gau Shala",
       callBtn: "📞 CALL NOW",
       mainImg: packs,
       otherItems: [
         { id: 1, name: "Gobar Ganesh Ji",       img: ganeshji, price: "₹151/-"  },
-        { id: 2, name: "Gobar Vastu Pyramid",   img: piraamid, price: "₹51/-" },
+        { id: 2, name: "Gobar Vastu Pyramid",   img: piraamid, price: "₹51/-"   },
         { id: 3, name: "Gobar Mala",            img: malaa,    price: "₹151/-"  },
-        { id: 4, name: "Foot Rest",             img: footrest, price: "₹200/-" },
-        { id: 5, name: "Desi Gobar Manure",     img: Khaad,    price: "₹151/-"  }
+        { id: 4, name: "Foot Rest",             img: footrest, price: "₹200/-"  },
+        { id: 5, name: "Desi Gobar Manure",     img: Khaad,    price: "₹151/-"  },
+        { id: 6, name: "A2 Villona Ghee",       img: ghee,     price: "₹1001/-" },
       ],
       ingredients: [
         "Gobar", "Gomutra", "Nau Grah Samidha", "Aam",
-        "Tulsi Ki Lakdi", "Neem", 
+        "Tulsi Ki Lakdi", "Neem",
         "Kapoor", "Pili Sarso", "Jatamansi", "Kamal Gatta",
-          "20+ Other Herbs "
+        "20+ Other Herbs"
       ]
     },
     HI: {
@@ -51,18 +54,20 @@ const ProductPage = ({ language }) => {
       contactLabel: "संपर्क करें",
       subText: "गौ तत्व परिवार",
       ctaText: "ऑर्डर देने या जानकारी के लिए सीधे बात करें",
+      gauShala: "राधे राधे गौ शाला",
       callBtn: "📞 अभी कॉल करें",
       mainImg: packs,
       otherItems: [
         { id: 1, name: "गोबर के गणेश जी",        img: ganeshji, price: "₹151/-"  },
-        { id: 2, name: "गोबर की वास्तु पिरामिड", img: piraamid, price: "₹51/-" },
+        { id: 2, name: "गोबर की वास्तु पिरामिड", img: piraamid, price: "₹51/-"   },
         { id: 3, name: "गोबर की माला",           img: malaa,    price: "₹151/-"  },
-        { id: 4, name: "Foot Rest (स्टैंड)",     img: footrest, price: "₹200/-" },
-        { id: 5, name: "देसी गोबर की खाद",       img: Khaad,    price: "₹151/-"  }
+        { id: 4, name: "Foot Rest (स्टैंड)",     img: footrest, price: "₹200/-"  },
+        { id: 5, name: "देसी गोबर की खाद",       img: Khaad,    price: "₹151/-"  },
+        { id: 6, name: "A2 बिलोना घी",           img: ghee,     price: "₹1001/-" },
       ],
       ingredients: [
         "गोबर", "गोमूत्र", "नौ ग्रह समिधा", "आम",
-        "तुलसी की लकड़ी", "नीम", 
+        "तुलसी की लकड़ी", "नीम",
         "कपूर", "पीली सरसों", "जटामासी", "कमल गट्टा",
         "20+ अन्य जड़ी-बूटियां"
       ]
@@ -74,9 +79,6 @@ const ProductPage = ({ language }) => {
   return (
     <div className="bg-white min-h-screen">
       <div className="max-w-6xl mx-auto px-4 py-6 md:py-10">
-
-        {/* Title */}
-       
 
         {/* 1. Main Featured Product */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 mb-10 items-start">
@@ -95,55 +97,53 @@ const ProductPage = ({ language }) => {
             <p className="text-red-600 font-bold bg-red-50 inline-block px-3 py-1 rounded-md mb-2 text-xs md:text-sm">* {current.delivery}</p>
           </div>
 
-          {/* Ingredients List */}
-          <div className="bg-orange-50 p-5 md:p-8 rounded-3xl border-2 border-orange-200">
-            <h4 className="text-xl md:text-2xl font-bold text-orange-900 mb-6 border-b-2 border-orange-200 pb-2 flex items-center gap-2">
-              🍃 {current.ingredientsTitle}
-            </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {current.ingredients.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-2 bg-white p-3 rounded-xl shadow-sm border border-orange-100 hover:scale-[1.02] transition-transform">
-                  <div className="w-2.5 h-2.5 flex-shrink-0 rounded-full bg-orange-600 shadow-sm"></div>
-                  <span className="text-gray-800 font-bold text-sm md:text-base">{item}</span>
-                </div>
-              ))}
-            </div>
+          {/* Ingredients List — style changed, button jaisi nahi lagegi */}
+          <div className="bg-orange-50 p-5 md:p-8 rounded-3xl border-2 border-orange-200 h-full">
+  <h4 className="text-xl md:text-2xl font-bold text-orange-900 mb-6 border-b-2 border-orange-200 pb-2 flex items-center gap-2">
+    🍃 {current.ingredientsTitle}
+  </h4>
+  <div className="grid grid-cols-2 gap-3">
+    {current.ingredients.map((item, idx) => (
+      <div
+        key={idx}
+        className="flex items-center gap-2 py-2 border-b border-orange-100 last:border-0"
+      >
+        <span className="text-green-600 text-lg flex-shrink-0">🔶</span>
+        <span className="text-orange-950 font-semibold text-sm md:text-base">{item}</span>
+      </div>
+    ))}
+  </div>
+
           </div>
         </div>
 
-        {/* 2. Other Products */}
+        {/* 2. Other Products — 3 cols on md, auto on lg */}
         <div className="mt-12 md:mt-16 mb-20">
           <h4 className="text-2xl md:text-3xl font-bold text-orange-950 mb-8 text-center tracking-tight">
             {current.otherTitle}
           </h4>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
             {current.otherItems.map((item) => (
               <div
                 key={item.id}
                 onClick={() => navigate(`/product/${item.id}`)}
                 className="group cursor-pointer bg-white border-2 border-orange-50 p-3 md:p-4 rounded-2xl md:rounded-3xl text-center shadow-sm hover:shadow-xl hover:border-orange-200 transition-all relative overflow-hidden"
               >
-                {/* Image */}
                 <div className="w-full aspect-square bg-orange-50 rounded-xl md:rounded-2xl mb-3 flex items-center justify-center overflow-hidden border border-orange-100 shadow-inner relative">
                   <img
                     src={item.img}
                     alt={item.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-orange-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2">
                     <span className="bg-white text-orange-950 px-3 py-2 rounded-full text-[10px] md:text-xs font-black uppercase tracking-tighter shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                       {current.viewDetails}
                     </span>
                   </div>
                 </div>
-
-                {/* Name */}
                 <h5 className="font-bold text-orange-900 text-[11px] md:text-sm uppercase leading-tight mb-2 flex items-center justify-center min-h-[32px] group-hover:text-orange-700 transition-colors">
                   {item.name}
                 </h5>
-
-                {/* Price Badge */}
                 <span className="inline-block bg-orange-100 text-orange-800 font-black text-xs md:text-sm px-3 py-1 rounded-full border border-orange-200">
                   {item.price}
                 </span>
@@ -156,32 +156,30 @@ const ProductPage = ({ language }) => {
         <div className="bg-orange-900 rounded-[2.5rem] shadow-2xl overflow-hidden mb-10">
           <div className="flex flex-col md:flex-row items-center">
 
-            {/* Left — label only, no name */}
             <div className="w-full md:w-1/2 p-8 md:p-12 bg-white/5 text-center md:text-left border-b md:border-b-0 md:border-r border-white/10">
-              <span className="text-orange-400 text-[10px] font-black uppercase tracking-[0.3em] mb-3 block">
+              <span className="text-orange-400 text-[13px] font-black uppercase  mb-3 block">
                 {current.contactLabel}
               </span>
               <p className="text-orange-100 text-base md:text-lg font-medium leading-relaxed">
                 {current.ctaText}
               </p>
-              <p className="text-orange-200/60 text-xs font-bold uppercase tracking-widest mt-3">
-                {current.subText}
+              {/* Radhe Radhe Gau Shala */}
+              <p className="text-orange-300 text-lg md:text-base font-bold mt-2 ">
+                 {current.gauShala}
               </p>
+             
             </div>
 
-            {/* Right — clickable number */}
             <div className="w-full md:w-1/2 p-8 md:p-12 text-center flex flex-col items-center justify-center gap-5">
-              <p className="text-orange-200 text-sm font-bold uppercase tracking-widest">
+              <p className="text-orange-200 text-sm font-bold uppercase ">
                 📞 {language === 'HI' ? 'हमारा नंबर' : 'Our Number'}
               </p>
-              
               <a href="tel:9425175398"
                 className="text-white text-3xl md:text-4xl font-black tracking-tight hover:text-orange-300 transition-colors"
               >
                 94251 75398
               </a>
-              
-             <a href="tel:9425175398"
+              <a href="tel:9425175398"
                 className="bg-white text-orange-900 px-10 py-4 rounded-2xl font-black text-lg hover:bg-orange-50 transition-all active:scale-95 shadow-lg"
               >
                 {current.callBtn}
