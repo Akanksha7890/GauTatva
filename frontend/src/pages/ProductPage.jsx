@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import ganeshji from '../assets/ganeshji.png';
 import piraamid from '../assets/piraamid.png';
 import malaa from '../assets/malaa.png';
-import Khaad from '../assets/Khad.png';
+import khad from '../assets/khad.png';
 import footrest from '../assets/footrest.png';
 import packs from '../assets/packs.png';
 import ghee from '../assets/ghee.png';
@@ -32,7 +32,7 @@ const ProductPage = ({ language }) => {
         { id: 2, name: "Gobar Vastu Pyramid",   img: piraamid, price: "₹51/-"   },
         { id: 3, name: "Gobar Mala",            img: malaa,    price: "₹151/-"  },
         { id: 4, name: "Foot Rest",             img: footrest, price: "₹151/-"  },
-        { id: 5, name: "Desi Gobar Manure",     img: Khaad,    price: "₹151/-"  },
+        { id: 5, name: "Desi Gobar Manure",     img: khad,    price: "₹151/-"  },
         { id: 6, name: "A2 Villona Ghee",       img: ghee,     price: "₹1001/-" },
       ],
       ingredients: [
