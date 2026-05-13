@@ -3,7 +3,7 @@ import React from 'react';
 const Benefits = ({ language }) => {
   const content = {
     EN: {
-      title: "Why Choose GauTatva ?",
+      title:  "Why Only Indian Vedic Desi Cow Dung Cakes?",
       subtitle: "The Science and Spirit Behind Our Tradition",
       sciTitle: "Scientific Benefits",
       spiTitle: "Spiritual Benefits",
@@ -39,7 +39,7 @@ const Benefits = ({ language }) => {
       ]
     },
     HI: {
-      title: "गौ तत्व ही क्यों?",
+      title: "भारतीय वेदलक्षणा देशी गाय के कंडे ही क्यों?",
       subtitle: "हमारी परंपरा के पीछे का विज्ञान और आध्यात्म",
       sciTitle: "वैज्ञानिक लाभ (Scientific)",
       spiTitle: "आध्यात्मिक लाभ (Spiritual)",

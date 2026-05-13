@@ -3,10 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import ganeshji from '../assets/ganeshji.png';
 import piraamid from '../assets/piraamid.png';
 import malaa from '../assets/malaa.png';
-import Khaad from '../assets/Khaad.png';
+import Khaad from '../assets/Khad.png';
 import footrest from '../assets/footrest.png';
 import packs from '../assets/packs.png';
-import ghee from '../assets/ghee.png'; // apna actual filename check karo
+import ghee from '../assets/ghee.png';
 
 const ProductPage = ({ language }) => {
   const navigate = useNavigate();
@@ -15,28 +15,28 @@ const ProductPage = ({ language }) => {
     EN: {
       featured: "Featured Product",
       kandeName: "Vedic Kande Pack",
-      price: "₹150/-",
+      price: "₹151/-",
       packInfo: "Pack of 10 Pieces",
       delivery: "Delivery charges extra",
       ingredientsTitle: "Traditional Ingredients",
       otherTitle: "More from GauTatva",
-      viewDetails: "View Details",
+      viewDetails: "View Details", // Button text
       contactLabel: "Get In Touch",
       subText: "GauTatva Family",
       ctaText: "Call directly to place your order or for more info",
-      gauShala: "Radhe Radhe Gau Shala",
+      gauShala: "Radhe Radhe GauShala",
       callBtn: "📞 CALL NOW",
       mainImg: packs,
       otherItems: [
         { id: 1, name: "Gobar Ganesh Ji",       img: ganeshji, price: "₹151/-"  },
         { id: 2, name: "Gobar Vastu Pyramid",   img: piraamid, price: "₹51/-"   },
         { id: 3, name: "Gobar Mala",            img: malaa,    price: "₹151/-"  },
-        { id: 4, name: "Foot Rest",             img: footrest, price: "₹200/-"  },
+        { id: 4, name: "Foot Rest",             img: footrest, price: "₹151/-"  },
         { id: 5, name: "Desi Gobar Manure",     img: Khaad,    price: "₹151/-"  },
         { id: 6, name: "A2 Villona Ghee",       img: ghee,     price: "₹1001/-" },
       ],
       ingredients: [
-        "Gobar", "Gomutra", "Nau Grah Samidha", "Aam",
+        "Desi Gay Ka Gobar", "Gomutra", "Nau Grah Samidha", "Aam",
         "Tulsi Ki Lakdi", "Neem",
         "Kapoor", "Pili Sarso", "Jatamansi", "Kamal Gatta",
         "20+ Other Herbs"
@@ -45,28 +45,28 @@ const ProductPage = ({ language }) => {
     HI: {
       featured: "मुख्य उत्पाद",
       kandeName: "वैदिक कंडे पैक",
-      price: "₹150/-",
+      price: "₹151/-",
       packInfo: "10 कंडे का पैक",
       delivery: "डिलीवरी शुल्क अलग से लागू होगा।",
       ingredientsTitle: "शुद्ध सामग्रियां (जड़ी-बूटी)",
       otherTitle: "गौ तत्व के अन्य उत्पाद",
-      viewDetails: "विवरण देखें",
+      viewDetails: "विवरण देखें", // Button text
       contactLabel: "संपर्क करें",
       subText: "गौ तत्व परिवार",
       ctaText: "ऑर्डर देने या जानकारी के लिए सीधे बात करें",
-      gauShala: "राधे राधे गौ शाला",
+      gauShala: "राधे राधे गौशाला",
       callBtn: "📞 अभी कॉल करें",
       mainImg: packs,
       otherItems: [
         { id: 1, name: "गोबर के गणेश जी",        img: ganeshji, price: "₹151/-"  },
         { id: 2, name: "गोबर की वास्तु पिरामिड", img: piraamid, price: "₹51/-"   },
         { id: 3, name: "गोबर की माला",           img: malaa,    price: "₹151/-"  },
-        { id: 4, name: "Foot Rest (स्टैंड)",     img: footrest, price: "₹200/-"  },
-        { id: 5, name: "देसी गोबर की खाद",       img: Khaad,    price: "₹151/-"  },
+        { id: 4, name: "Foot Rest (स्टैंड)",     img: footrest, price: "₹151/-"  },
+        { id: 5, name: "देशी गोबर की खाद",       img: Khaad,    price: "₹151/-"  },
         { id: 6, name: "A2 बिलोना घी",           img: ghee,     price: "₹1001/-" },
       ],
       ingredients: [
-        "गोबर", "गोमूत्र", "नौ ग्रह समिधा", "आम",
+        "देशी गाय का गोबर", "गोमूत्र", "नौ ग्रह समिधा", "आम",
         "तुलसी की लकड़ी", "नीम",
         "कपूर", "पीली सरसों", "जटामासी", "कमल गट्टा",
         "20+ अन्य जड़ी-बूटियां"
@@ -97,27 +97,22 @@ const ProductPage = ({ language }) => {
             <p className="text-red-600 font-bold bg-red-50 inline-block px-3 py-1 rounded-md mb-2 text-xs md:text-sm">* {current.delivery}</p>
           </div>
 
-          {/* Ingredients List — style changed, button jaisi nahi lagegi */}
           <div className="bg-orange-50 p-5 md:p-8 rounded-3xl border-2 border-orange-200 h-full">
-  <h4 className="text-xl md:text-2xl font-bold text-orange-900 mb-6 border-b-2 border-orange-200 pb-2 flex items-center gap-2">
-    🍃 {current.ingredientsTitle}
-  </h4>
-  <div className="grid grid-cols-2 gap-3">
-    {current.ingredients.map((item, idx) => (
-      <div
-        key={idx}
-        className="flex items-center gap-2 py-2 border-b border-orange-100 last:border-0"
-      >
-        <span className="text-green-600 text-lg flex-shrink-0">🔶</span>
-        <span className="text-orange-950 font-semibold text-sm md:text-base">{item}</span>
-      </div>
-    ))}
-  </div>
-
+            <h4 className="text-xl md:text-2xl font-bold text-orange-900 mb-6 border-b-2 border-orange-200 pb-2 flex items-center gap-2">
+              🍃 {current.ingredientsTitle}
+            </h4>
+            <div className="grid grid-cols-2 gap-3">
+              {current.ingredients.map((item, idx) => (
+                <div key={idx} className="flex items-center gap-2 py-2 border-b border-orange-100 last:border-0">
+                  <span className="text-green-600 text-lg flex-shrink-0">🔶</span>
+                  <span className="text-orange-950 font-semibold text-sm md:text-base">{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* 2. Other Products — 3 cols on md, auto on lg */}
+        {/* 2. Other Products - Card modification happens here */}
         <div className="mt-12 md:mt-16 mb-20">
           <h4 className="text-2xl md:text-3xl font-bold text-orange-950 mb-8 text-center tracking-tight">
             {current.otherTitle}
@@ -127,26 +122,31 @@ const ProductPage = ({ language }) => {
               <div
                 key={item.id}
                 onClick={() => navigate(`/product/${item.id}`)}
-                className="group cursor-pointer bg-white border-2 border-orange-50 p-3 md:p-4 rounded-2xl md:rounded-3xl text-center shadow-sm hover:shadow-xl hover:border-orange-200 transition-all relative overflow-hidden"
+                className="group cursor-pointer bg-white border-2 border-orange-50 p-3 md:p-4 rounded-2xl md:rounded-3xl text-center shadow-sm hover:shadow-xl hover:border-orange-200 transition-all relative flex flex-col items-center"
               >
-                <div className="w-full aspect-square bg-orange-50 rounded-xl md:rounded-2xl mb-3 flex items-center justify-center overflow-hidden border border-orange-100 shadow-inner relative">
+                {/* Image Section - Removed Overlay */}
+                <div className="w-full aspect-square bg-orange-50 rounded-xl md:rounded-2xl mb-3 flex items-center justify-center overflow-hidden border border-orange-100 shadow-inner">
                   <img
                     src={item.img}
                     alt={item.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-orange-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2">
-                    <span className="bg-white text-orange-950 px-3 py-2 rounded-full text-[10px] md:text-xs font-black uppercase tracking-tighter shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      {current.viewDetails}
-                    </span>
-                  </div>
                 </div>
-                <h5 className="font-bold text-orange-900 text-[11px] md:text-sm uppercase leading-tight mb-2 flex items-center justify-center min-h-[32px] group-hover:text-orange-700 transition-colors">
+
+                {/* Name */}
+                <h5 className="font-bold text-orange-900 text-[11px] md:text-sm uppercase leading-tight mb-2 flex items-center justify-center min-h-[32px]">
                   {item.name}
                 </h5>
-                <span className="inline-block bg-orange-100 text-orange-800 font-black text-xs md:text-sm px-3 py-1 rounded-full border border-orange-200">
+
+                {/* Price */}
+                <span className="inline-block bg-orange-100 text-orange-800 font-black text-xs md:text-sm px-3 py-1 rounded-full border border-orange-200 mb-3">
                   {item.price}
                 </span>
+
+                {/* New View Details Text/Button */}
+                <div className="text-orange-700 text-[10px] md:text-xs font-bold uppercase tracking-wide border-t border-orange-100 w-full pt-2 group-hover:text-orange-500 transition-colors">
+                  {current.viewDetails} →
+                </div>
               </div>
             ))}
           </div>
@@ -155,40 +155,31 @@ const ProductPage = ({ language }) => {
         {/* 3. CTA Contact Section */}
         <div className="bg-orange-900 rounded-[2.5rem] shadow-2xl overflow-hidden mb-10">
           <div className="flex flex-col md:flex-row items-center">
-
             <div className="w-full md:w-1/2 p-8 md:p-12 bg-white/5 text-center md:text-left border-b md:border-b-0 md:border-r border-white/10">
-              <span className="text-orange-400 text-[13px] font-black uppercase  mb-3 block">
+              <span className="text-orange-400 text-[13px] font-black uppercase mb-3 block">
                 {current.contactLabel}
               </span>
               <p className="text-orange-100 text-base md:text-lg font-medium leading-relaxed">
                 {current.ctaText}
               </p>
-              {/* Radhe Radhe Gau Shala */}
               <p className="text-orange-300 text-lg md:text-base font-bold mt-2 ">
                  {current.gauShala}
               </p>
-             
             </div>
 
             <div className="w-full md:w-1/2 p-8 md:p-12 text-center flex flex-col items-center justify-center gap-5">
               <p className="text-orange-200 text-sm font-bold uppercase ">
                 📞 {language === 'HI' ? 'हमारा नंबर' : 'Our Number'}
               </p>
-              <a href="tel:9425175398"
-                className="text-white text-3xl md:text-4xl font-black tracking-tight hover:text-orange-300 transition-colors"
-              >
+              <a href="tel:9425175398" className="text-white text-3xl md:text-4xl font-black tracking-tight hover:text-orange-300 transition-colors">
                 94251 75398
               </a>
-              <a href="tel:9425175398"
-                className="bg-white text-orange-900 px-10 py-4 rounded-2xl font-black text-lg hover:bg-orange-50 transition-all active:scale-95 shadow-lg"
-              >
+              <a href="tel:9425175398" className="bg-white text-orange-900 px-10 py-4 rounded-2xl font-black text-lg hover:bg-orange-50 transition-all active:scale-95 shadow-lg">
                 {current.callBtn}
               </a>
             </div>
-
           </div>
         </div>
-
       </div>
     </div>
   );
