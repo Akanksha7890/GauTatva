@@ -6,7 +6,7 @@ import ganeshji from '../assets/ganeshji.png';
 import piraamid from '../assets/piraamid.png';
 import malaa from '../assets/malaa.png';
 import footrest from '../assets/footrest.png';
-import Khaad from '../assets/Khaad.png';
+import khad from '../assets/khad.png';
 import ghee from '../assets/ghee.png';
 
 const ProductDetail = ({ language }) => {
@@ -205,7 +205,7 @@ const ProductDetail = ({ language }) => {
 
     5: {
       name:    language === 'HI' ? "भारतीय वेदलक्षणा देशी गाय के गोबर की खाद"           : "Organic Bharatiya Vedalakshana Desi Cow Manure",
-      img:     Khaad,
+      img:     khad,
       tagline: language === 'HI' ? "पौधों के लिए प्रकृति का सर्वश्रेष्ठ उपहार" : "Nature's Greatest Gift for Your Plants",
 
       pricing: language === 'HI' ? [

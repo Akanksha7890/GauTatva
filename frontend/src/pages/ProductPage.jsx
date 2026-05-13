@@ -62,7 +62,7 @@ const ProductPage = ({ language }) => {
         { id: 2, name: "गोबर की वास्तु पिरामिड", img: piraamid, price: "₹51/-"   },
         { id: 3, name: "गोबर की माला",           img: malaa,    price: "₹151/-"  },
         { id: 4, name: "Foot Rest (स्टैंड)",     img: footrest, price: "₹151/-"  },
-        { id: 5, name: "देशी गोबर की खाद",       img: Khaad,    price: "₹151/-"  },
+        { id: 5, name: "देशी गोबर की खाद",       img: khad,    price: "₹151/-"  },
         { id: 6, name: "A2 बिलोना घी",           img: ghee,     price: "₹1001/-" },
       ],
       ingredients: [
