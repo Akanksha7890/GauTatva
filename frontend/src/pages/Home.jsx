@@ -3,7 +3,9 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Hero from '../assets/Hero.png';
 import cow from '../assets/cow.jpg';
+import piraa from '../assets/piraa.png';
 import ImageSlider from '../components/ImageSlider';
+
 const Home = ({ language }) => {
   const content = {
     EN: {
@@ -69,7 +71,7 @@ comparison: [
       envPoints: [
         { title: "Saving Forests", text: "100 packs save one full tree from being cut for wood.", icon: "🌳" },
         { title: "Zero Chemical Footprint", text: "Zero toxic fumes, protecting both lungs and the ozone layer.", icon: "🚫" },
-        { title: "Premium Plant Food", text: "Leftover ash is a mineral-rich organic fertilizer for plants.", icon: "🌻" }
+        { title: "Premium Plant Food", text: "Residual ash obtained from cow dung, cow urine, and cow dung cakes is highly beneficial and eco-friendly for plant life and the animal kingdom.", icon: "🌻" }
       ]
     },
     HI: {
@@ -132,7 +134,7 @@ comparison: [
       envPoints: [
         { title: "वनों की रक्षा", text: "लकड़ी की जगह कंडों का उपयोग पेड़ों को कटने से सीधे बचाता है।", icon: "🌳" },
         { title: "केमिकल मुक्त भविष्य", text: "शून्य जहरीला धुआं, जिससे ओजोन परत और फेफड़े सुरक्षित रहते हैं।", icon: "🚫" },
-        { title: "पौधों के लिए अमृत", text: "बची हुई राख पौधों के लिए बेहतरीन जैविक खाद का काम करती है।", icon: "🌻" }
+        { title: "पौधों के लिए अमृत", text: "गोबर, गोमूत्र एवं गोबर कंडों से बची राख वनस्पति एवं प्राणी जगत के लिए अत्यंत उपयुक्त और पर्यावरण हितैषी है।", icon: "🌻" }
       ]
     }
   };
@@ -149,6 +151,9 @@ comparison: [
         
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="space-y-8 text-center lg:text-left">
+              <h1 className="text-3xl md:text-5xl font-black text-orange-900">
+    GauTatva
+  </h1>
             <span className="inline-block px-4 py-1.5 bg-orange-100 text-orange-900 text-xs font-bold  rounded-full uppercase shadow-inner">{curr.tagline}</span>
             <h1 className="text-5xl lg:text-7xl font-serif leading-tight text-stone-950 tracking-tight">{curr.title}</h1>
             <p className="text-lg text-stone-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">{curr.desc}</p>

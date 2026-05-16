@@ -124,14 +124,31 @@ const Benefits = ({ language }) => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-24 bg-orange-950 text-white p-12 rounded-[3rem] text-center shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-orange-800 rounded-full -mr-16 -mt-16 opacity-50"></div>
-          <h3 className="text-3xl font-bold mb-4 relative z-10">{current.orderText}</h3>
-          <p className="mb-8 text-orange-200 text-lg">100% Pure & Traditional</p>
-          <a href="tel:9425175398" className="inline-block bg-white text-orange-950 px-12 py-4 rounded-full font-black text-xl hover:bg-orange-50 transition-all transform hover:scale-105 shadow-xl">
-            📞 {current.callBtn}
-          </a>
-        </div>
+<div className="mt-24 bg-orange-950 text-white p-12 rounded-[3rem] text-center shadow-2xl relative overflow-hidden">
+  <div className="absolute top-0 right-0 w-32 h-32 bg-orange-800 rounded-full -mr-16 -mt-16 opacity-50"></div>
+
+  <h3 className="text-3xl font-bold mb-4 relative z-10">
+    {current.orderText}
+  </h3>
+
+  <p className="mb-4 text-orange-200 text-lg">
+    100% Pure & Traditional
+  </p>
+
+  {/* Manufacturing Info */}
+  <p className="text-orange-100 text-sm md:text-base mb-8 leading-relaxed max-w-2xl mx-auto">
+    {language === 'HI'
+      ? 'उत्पादन: राधे राधे गौशाला सिवनी एवं अन्नपूर्णा स्वसहायता समूह चरगाँव'
+      : 'Manufactured by: Radhe Radhe Gaushala Seoni & Annapurna Self-Help Group, Chargaon'}
+  </p>
+
+  <a
+    href="tel:9425175398"
+    className="inline-block bg-white text-orange-950 px-12 py-4 rounded-full font-black text-xl hover:bg-orange-50 transition-all transform hover:scale-105 shadow-xl"
+  >
+    📞 {current.callBtn}
+  </a>
+</div>
 
       </div>
     </div>

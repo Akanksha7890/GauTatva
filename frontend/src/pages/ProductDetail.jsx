@@ -8,6 +8,8 @@ import malaa from '../assets/malaa.png';
 import footrest from '../assets/footrest.png';
 import khad from '../assets/khad.png';
 import ghee from '../assets/ghee.png';
+import piraa from '../assets/piraa.png';
+
 
 const ProductDetail = ({ language }) => {
   const { productId } = useParams();
@@ -20,27 +22,30 @@ const ProductDetail = ({ language }) => {
       tagline: language === 'HI' ? "मंगल का प्रतीक, शुद्धता का वास" : "Symbol of Auspiciousness & Divine Purity",
 
       pricing: language === 'HI' ? [
-        { label: "छोटे गणेश जी — 4 इंच", price: "₹51", highlight: true },
-        { label: "बड़े गणेश जी — 8 इंच", price: "₹151", highlight: false },
+        { label: "छोटे गणेश जी विग्रह — 4 इंच", price: "₹51", highlight: true },
+        { label: "बड़े गणेश जी विग्रह — 8 इंच", price: "₹151", highlight: false },
       ] : [
-        { label: "Small Ganesh Ji — 4 Inch", price: "₹51", highlight: true },
-        { label: "Large Ganesh Ji — 8 Inch", price: "₹151", highlight: false },
+         { label: "Small Ganesh Ji Idol — 4 inch", price: "₹51", highlight: true },
+        { label: "Large Ganesh Ji Idol — 8 inch", price: "₹151", highlight: false },
       ],
 
       colorNote: language === 'HI'
-        ? "🎨 अपनी पसंद का रंग चुनें! रंगीन व सादे — दोनों विकल्प उपलब्ध हैं।"
-        : "🎨 Choose Your Favourite Color! Both colorful & plain options available.",
+        ? "🎨 आप अपनी पसंद के अनुसार रंगीन या सादा, कोई भी विकल्प चुन सकते हैं। यद्यपि प्रतिमा को रंगों से सजाया जा सकता है, परंतु हमारा सुझाव है कि प्राकृतिक गोबर के मूल स्वरूप में ही विग्रह को रहने दें। प्रकृति की सादगी में ही असली दिव्यता है।"
+
+        : "🎨 You may choose between colorful or plain options according to your preference. While the idols can be decorated with colors, we recommend keeping the deity in its original, natural cow dung form. True divinity resides in nature's own simplicity.",
 
       importance: language === 'HI'
         ? "शास्त्रों में कहा गया है — 'गोमये वसते लक्ष्मी।' भारतीय वेदलक्षणा देशी गाय के गोबर में साक्षात माँ लक्ष्मी और गणेश जी का वास होता है। ये गोबर के गणेश जी केवल एक मूर्ति नहीं, बल्कि सकारात्मक ऊर्जा का जीवंत स्रोत हैं।"
         : "Scriptures declare — 'Gomaye Vasate Lakshmi.' The dung of Bharatiya Vedalakshana Desi Cow is the abode of Goddess Lakshmi and Lord Ganesha. These Ganesh idols are not mere figurines — they are living sources of positive cosmic energy.",
 
       scientific: language === 'HI' ? [
+        "जल में विसर्जन के बाद इसके प्राकृतिक तत्व जल का शोधन करने, जैविक संतुलन बनाए रखने और जल की प्राकृतिक शुद्धता को लंबे समय तक बनाए रखने में सहायक होते हैं।",
         "भारतीय वेदलक्षणा देशी गाय के गोबर में 'लिग्निन' और एंटी-माइक्रोबियल तत्व होते हैं जो वायुमंडल को 90% तक शुद्ध करते हैं।",
         "इसमें विद्यमान 'फिनोल' कंपाउंड कीटाणुओं और फंगस को प्राकृतिक रूप से नष्ट करता है।",
         "CSIR (भारत सरकार) के शोध के अनुसार भारतीय वेदलक्षणा देशी गाय का गोबर EMF और Wi-Fi रेडिएशन को 25-30% तक कम करता है।",
         "गोबर में 'इंडोल', 'स्काटोल' जैसे यौगिक तनाव कम करने वाले न्यूरोट्रांसमीटर को सक्रिय करते हैं।"
       ] : [
+        "After immersion in water, its natural elements help purify the water, maintain ecological balance, and preserve the natural purity of the water for a long time.",
         "Bharatiya Vedalakshana Desi Cow dung contains 'lignin' and anti-microbial elements that purify the atmosphere by up to 90%.",
         "Phenol compounds in the dung destroy bacteria and fungus naturally.",
         "CSIR (Govt. of India) research shows Bharatiya Vedalakshana Desi Cow dung reduces EMF/Wi-Fi radiation by 25-30%.",
@@ -66,7 +71,7 @@ const ProductDetail = ({ language }) => {
 
     2: {
       name:    language === 'HI' ? "वैदिक वास्तु पिरामिड"       : "Vedic Vastu Pyramid",
-      img:     piraamid,
+      img:     piraa,
       tagline: language === 'HI' ? "वास्तु दोष नाशक, ऊर्जा संतुलक" : "Vastu Defect Remover & Energy Balancer",
 
       pricing: language === 'HI' ? [
@@ -79,7 +84,7 @@ const ProductDetail = ({ language }) => {
 
       importance:
   language === 'HI'
-    ? "पिरामिड आकार ब्रह्मांडीय ऊर्जा को केंद्रित करने का सर्वोत्तम माध्यम माना जाता है। विशेष बात यह है कि गोबर को भूमि पर गिरने से पूर्व ही सुरक्षित रूप से संग्रहित कर लिया जाता है, जिससे उसकी प्राकृतिक शुद्धता एवं सकारात्मक ऊर्जा पूर्ण रूप से बनी रहती hai।"
+    ? "पिरामिड आकार ब्रह्मांडीय ऊर्जा को केंद्रित करने का सर्वोत्तम माध्यम माना जाता है। विशेष बात यह है कि गोबर को भूमि पर गिरने से पूर्व ही सुरक्षित रूप से संग्रहित कर लिया जाता है, जिससे उसकी प्राकृतिक शुद्धता एवं सकारात्मक ऊर्जा पूर्ण रूप से बनी रहती है।"
     : "This pyramid is crafted using carefully collected Bharatiya Vedalakshana Desi Cow dung before it touches the ground, preserving its natural purity and energetic properties completely.",
 
       scientific: language === 'HI' ? [
@@ -95,13 +100,13 @@ const ProductDetail = ({ language }) => {
       ],
 
       spiritual: language === 'HI' ? [
-        "वास्तु शास्त्र के अनुसार, उत्तर-पूर्व (ईशान कोण) में रखने से घर में सकारात्मकता और समृद्धि आती है।",
-          "विद्यार्थियों के अध्ययन कक्ष में रखने से एकाग्रता, स्मरण शक्ति एवं सकारात्मक सोच में वृद्धि होती है।",
+        "वास्तु शास्त्र के अनुसार, उत्तर-पूर्व (ईशान कोण) में रखने से घर में सकारात्मकता, समृद्धि आती है और वास्तु दोष समाप्त हो जाता है।",
+        "विद्यार्थियों के अध्ययन कक्ष में रखने से एकाग्रता, स्मरण शक्ति एवं सकारात्मक सोच में वृद्धि होती है।",
         "गाड़ी में रखने से यात्रा सुरक्षित और मन शांत रहता है।",
         "ऑफिस या दुकान में रखने से व्यापार में उन्नति और विवादों से मुक्ति मिलती है।",
         "ध्यान (Meditation) के समय पास रखने से एकाग्रता गहरी होती है।"
       ] : [
-        "Vastu Shastra recommends placing it in the North-East corner for prosperity and positivity.",
+        "According to Vastu Shastra, placing it in the North-East (Ishan Corner) brings positivity, prosperity, and helps eliminate Vastu defects from the home.",
         "Increases concentration, memory power, and positive thinking when placed in a student’s study room.",
         "Keeping it in the car ensures safe journeys and a calm mind.",
         "In office or shop, it improves business and resolves disputes.",
@@ -255,9 +260,11 @@ const ProductDetail = ({ language }) => {
       tagline: language === 'HI' ? "स्वास्थ्यवर्धक, शुद्ध और पोषक" : "Healthy, Pure & Deeply Nourishing",
 
       pricing: language === 'HI' ? [
-        { label: "500 ग्राम", price: "₹1001", highlight: true },
+        { label: "500 ग्राम", price: "₹999", highlight: true },
+          { label: "1000 ग्राम", price: "₹1899", highlight: false },
       ] : [
-        { label: "500 Grams", price: "₹1001", highlight: true },
+        { label: "500 Grams", price: "₹999", highlight: true },
+        { label: "1000 Grams", price: "₹1899", highlight: false },
       ],
 
       colorNote: null,
@@ -446,28 +453,41 @@ const ProductDetail = ({ language }) => {
         </div>
 
         {/* CTA Strip */}
-        <div className="mt-10 bg-orange-900 rounded-[2rem] p-7 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-          <div>
-            <p className="text-orange-300 text-xl font-black uppercase mb-1">
-              {language === 'HI' ? 'ऑर्डर करें' : 'Place Your Order'}
-            </p>
-            <h3 className="text-white text-xl md:text-2xl font-bold">
-              {language === 'HI'
-                ? 'इस उत्पाद को घर मंगवाएं — सीधे बात करें'
-                : 'Get this product delivered — Talk to us directly'}
-            </h3>
-            <a href="tel:9425175398"
-              className="text-orange-300 text-2xl md:text-3xl font-black mt-2 block hover:text-white transition-colors tracking-tight"
-            >
-              94251 75398
-            </a>
-          </div>
-          <a href="tel:9425175398"
-            className="bg-white text-orange-900 px-10 py-4 rounded-2xl font-black text-lg hover:bg-orange-50 transition-all active:scale-95 shadow-lg whitespace-nowrap"
-          >
-            {language === 'HI' ? '📞 अभी कॉल करें' : '📞 Call Now'}
-          </a>
-        </div>
+        {/* CTA Strip */}
+<div className="mt-10 bg-orange-900 rounded-[2rem] p-7 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+  <div>
+    <p className="text-orange-300 text-xl font-black uppercase mb-1">
+      {language === 'HI' ? 'ऑर्डर करें' : 'Place Your Order'}
+    </p>
+
+    <h3 className="text-white text-xl md:text-2xl font-bold">
+      {language === 'HI'
+        ? 'इस उत्पाद को घर मंगवाएं — सीधे बात करें'
+        : 'Get this product delivered — Talk to us directly'}
+    </h3>
+
+    <a
+      href="tel:9425175398"
+      className="text-orange-300 text-2xl md:text-3xl font-black mt-2 block hover:text-white transition-colors tracking-tight"
+    >
+      94251 75398
+    </a>
+
+    {/* Manufacturing Info */}
+    <p className="text-orange-100 text-sm md:text-base mt-4 leading-relaxed max-w-2xl">
+      {language === 'HI'
+        ? 'उत्पादन: राधे राधे गौशाला सिवनी एवं अन्नपूर्णा स्वसहायता समूह चरगाँव'
+    : 'Manufactured by: Radhe Radhe Gaushala Seoni & Annapurna Self-Help Group, Chargaon'}
+    </p>
+  </div>
+
+  <a
+    href="tel:9425175398"
+    className="bg-white text-orange-900 px-10 py-4 rounded-2xl font-black text-lg hover:bg-orange-50 transition-all active:scale-95 shadow-lg whitespace-nowrap"
+  >
+    {language === 'HI' ? '📞 अभी कॉल करें' : '📞 Call Now'}
+  </a>
+</div>
 
       </div>
     </div>
