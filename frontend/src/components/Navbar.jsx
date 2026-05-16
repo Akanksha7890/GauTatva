@@ -62,7 +62,7 @@ const Navbar = ({ language, setLanguage }) => {
                     letterSpacing: '-0.5px',
                   }}
                 >
-                  Gau<em style={{ color: '#ea580c', fontStyle: 'italic' }}>tatv</em>
+                  Gau<em style={{ color: '#ea580c', fontStyle: 'italic' }}>tatva</em>
                 </span>
                 <span
                   style={{
@@ -73,7 +73,7 @@ const Navbar = ({ language, setLanguage }) => {
                     whiteSpace: 'nowrap',
                   }}
                 >
-                 गौतत्वा
+                 गौतत्व
                 </span>
               </div>
             </Link>
