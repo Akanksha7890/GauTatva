@@ -69,7 +69,6 @@ const Navbar = ({ language, setLanguage }) => {
                     fontFamily: "'Yatra One', cursive",
                     color: '#c2410c',
                     fontSize: 'clamp(9px, 1.5vw, 13px)',
-                    letterSpacing: '2px',
                     marginTop: '2px',
                     whiteSpace: 'nowrap',
                   }}
