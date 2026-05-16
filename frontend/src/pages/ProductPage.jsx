@@ -15,6 +15,7 @@ import laxmi from '../assets/laxmi.png';
 import dhup from '../assets/dhup.jpeg';
 import batti from '../assets/batti.png';
 import gannu from '../assets/gannu.jpeg';
+import bappa from '../assets/bappa.png';
 
 const ProductPage = ({ language }) => {
   const navigate = useNavigate();
@@ -249,7 +250,7 @@ const ProductPage = ({ language }) => {
       name: language === 'HI'
         ? '12 इंच एवं 18 इंच गणेशजी विग्रह'
         : '12 Inch & 18 Inch Ganesh Ji Vigrah',
-      img: gannu
+      img: bappa
     },
     {
       name: language === 'HI' ? 'लक्ष्मीजी विग्रह' : 'Lakshmi Ji Idol',

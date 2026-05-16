@@ -74,7 +74,7 @@ const Navbar = ({ language, setLanguage }) => {
                     whiteSpace: 'nowrap',
                   }}
                 >
-                  गौतत्व
+                 गौतत्वा
                 </span>
               </div>
             </Link>
