@@ -5,6 +5,7 @@ import Hero from '../assets/Hero.png';
 import cow from '../assets/cow.jpg';
 import piraa from '../assets/piraa.png';
 import ImageSlider from '../components/ImageSlider';
+import logo from '../assets/logo.png'; // Make sure the filename matches your actual file
 
 const Home = ({ language }) => {
   const content = {
@@ -151,10 +152,9 @@ comparison: [
         
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="space-y-8 text-center lg:text-left">
-              <h1 className="text-3xl md:text-5xl font-black text-orange-900">
-    GauTatva
-  </h1>
-            <span className="inline-block px-4 py-1.5 bg-orange-100 text-orange-900 text-xs font-bold  rounded-full uppercase shadow-inner">{curr.tagline}</span>
+   {/* --- UPDATED HEADING WITH LOGO --- */}
+{/* --- Logo and Text Section Fixed --- */}
+   <span className="inline-block px-4 py-1.5 bg-orange-100 text-orange-900 text-xs font-bold  rounded-full uppercase shadow-inner">{curr.tagline}</span>
             <h1 className="text-5xl lg:text-7xl font-serif leading-tight text-stone-950 tracking-tight">{curr.title}</h1>
             <p className="text-lg text-stone-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">{curr.desc}</p>
             

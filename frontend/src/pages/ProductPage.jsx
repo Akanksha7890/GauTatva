@@ -38,10 +38,10 @@ const ProductPage = ({ language }) => {
 
       otherItems: [
         { id: 1, name: "Gobar Ganesh Ji", img: ganeshji, price: "₹151/-" },
-        { id: 2, name: "Gobar Vastu Pyramid", img: piraa, price: "₹51/-" },
+        { id: 2, name: "Gobar Vastu Pyramid (Set of 2)", img: piraa, price: "₹51/-" },
         { id: 3, name: "Gobar Mala", img: malaa, price: "₹151/-" },
         { id: 4, name: "Foot Rest", img: footrest, price: "₹151/-" },
-        { id: 5, name: "Desi Gobar Manure", img: khad, price: "₹151/-" },
+        { id: 5, name: "Desi Gobar Manure", img: khad, price: "₹21/-" },
         { id: 6, name: "A2 Villona Ghee", img: ghee, price: "₹999/-" },
       ],
 
@@ -81,10 +81,10 @@ const ProductPage = ({ language }) => {
 
       otherItems: [
         { id: 1, name: "गोबर के गणेश जी", img: ganeshji, price: "₹151/-" },
-        { id: 2, name: "गोबर की वास्तु पिरामिड", img: piraa, price: "₹51/-" },
+        { id: 2, name: "गोबर की वास्तु पिरामिड (2 का सेट)", img: piraa, price: "₹51/-" },
         { id: 3, name: "गोबर की माला", img: malaa, price: "₹151/-" },
         { id: 4, name: "Foot Rest (स्टैंड)", img: footrest, price: "₹151/-" },
-        { id: 5, name: "देशी गोबर की खाद", img: khad, price: "₹151/-" },
+        { id: 5, name: "देशी गोबर की खाद", img: khad, price: "₹21/-" },
         { id: 6, name: "A2 बिलोना घी", img: ghee, price: "₹999/-" },
       ],
 
@@ -238,7 +238,7 @@ const ProductPage = ({ language }) => {
 
           </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:flex lg:flex-row lg:wrap lg:justify-center gap-4 md:gap-6">
 
   {[
     {
@@ -246,11 +246,11 @@ const ProductPage = ({ language }) => {
       img: dhup
     },
     {
-  name: language === 'HI'
-    ? '12 इंच एवं 18 इंच गणेशजी विग्रह'
-    : '12 Inch & 18 Inch Ganesh Ji Vigrah',
-  img: gannu
-},
+      name: language === 'HI'
+        ? '12 इंच एवं 18 इंच गणेशजी विग्रह'
+        : '12 Inch & 18 Inch Ganesh Ji Vigrah',
+      img: gannu
+    },
     {
       name: language === 'HI' ? 'लक्ष्मीजी विग्रह' : 'Lakshmi Ji Idol',
       img: laxmi
@@ -260,41 +260,30 @@ const ProductPage = ({ language }) => {
       img: hanumanji
     },
     {
-      name: language === 'HI' ? 'गोबर स्लीपिंग मैट' : 'Cow Dung Sleeping Mat',
-      img: footrest
-    },
-    {
-      name: language === 'HI' ? 'गोबर कार सीटिंग मैट' : 'Cow Dung Car Seating Mat',
-      img: piraa
-    },
-    {
       name: language === 'HI' ? 'गोबर दीपक' : 'Cow Dung Diya',
-      img: batti
+      img: dipak
     }
   ].map((item, idx) => (
 
     <div
       key={idx}
-      className="group bg-white border-2 border-orange-50 p-3 md:p-4 rounded-2xl md:rounded-3xl text-center shadow-sm hover:shadow-xl hover:border-orange-200 transition-all relative flex flex-col items-center"
+      /* lg:w-[calc(20%-1.25rem)] से बड़ी स्क्रीन पर सभी 5 कार्ड्स को बिल्कुल एक बराबर चौड़ाई मिलेगी */
+      className="group bg-white border-2 border-orange-50 p-3 md:p-4 rounded-2xl md:rounded-3xl text-center shadow-sm hover:shadow-xl hover:border-orange-200 transition-all relative flex flex-col items-center w-full lg:w-[calc(20%-1.25rem)] min-w-[160px]"
     >
 
       {/* IMAGE BOX */}
       <div className="w-full aspect-square bg-orange-50 rounded-xl md:rounded-2xl mb-3 overflow-hidden border border-orange-100 shadow-inner">
-
         <img
           src={item.img}
           alt={item.name}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
-
       </div>
 
       {/* COMING SOON */}
       <div className="mb-3">
         <span className="bg-orange-700 text-white text-[9px] md:text-[10px] font-bold px-3 py-1 rounded-full shadow-lg tracking-wide">
-          {language === 'HI'
-            ? 'जल्द आ रहा है'
-            : 'COMING SOON'}
+          {language === 'HI' ? 'जल्द आ रहा है' : 'COMING SOON'}
         </span>
       </div>
 
@@ -304,10 +293,8 @@ const ProductPage = ({ language }) => {
       </h5>
 
       {/* MADE FROM COW DUNG */}
-      <span className="inline-block bg-orange-100 text-orange-800 font-black text-[10px] md:text-xs px-3 py-1 rounded-full border border-orange-200">
-        {language === 'HI'
-          ? 'गोबर से निर्मित'
-          : 'Made From Cow Dung'}
+      <span className="inline-block bg-orange-100 text-orange-800 font-black text-[10px] md:text-xs px-3 py-1 rounded-full border border-orange-200 mt-auto">
+        {language === 'HI' ? 'गोबर से निर्मित' : 'Made From Cow Dung'}
       </span>
 
     </div>

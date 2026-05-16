@@ -12,7 +12,6 @@ const Navbar = ({ language, setLanguage }) => {
         { name: "Benefits", path: "/benefits" }
       ]
     },
-
     HI: {
       links: [
         { name: "होम", path: "/" },
@@ -25,55 +24,100 @@ const Navbar = ({ language, setLanguage }) => {
   const current = content[language];
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#fdfaf5] shadow-sm border-b border-orange-100">
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Yatra+One&display=swap');
+      `}</style>
 
-    <div className="max-w-7xl mx-auto px-1 sm:px-2 lg:px-4">
+      <nav className="sticky top-0 z-50 bg-[#fdfaf5] shadow-sm border-b border-orange-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex justify-between items-center h-24">
 
-        {/* Navbar */}
-        <div className="flex justify-between items-center h-24">
-
-          {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 -ml-6">
-  <img
-    src={logo}
-    alt="Logo"
-    className="h-40 w-40 md:h-56 md:w-56 object-contain"
-  />
-</Link>
-
-          {/* Desktop + Mobile Menu */}
-          <div className="flex items-center gap-4 md:gap-8">
-
-            {current.links.map((link) => (
-              <NavLink
-                key={link.path}
-                to={link.path}
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-orange-700 font-bold border-b-2 border-orange-700 pb-1 text-sm md:text-base"
-                    : "text-gray-700 hover:text-orange-700 font-medium transition-all text-sm md:text-base"
-                }
-              >
-                {link.name}
-              </NavLink>
-            ))}
-
-            {/* Language Toggle */}
-            <button
-              onClick={() =>
-                setLanguage(language === 'EN' ? 'HI' : 'EN')
-              }
-              className="px-2 py-1 border border-orange-800 text-orange-800 rounded-md font-bold text-xs hover:bg-orange-800 hover:text-white transition-all"
+            {/* Logo + Brand Text — flush left */}
+            <Link
+              to="/"
+              className="flex items-center flex-shrink-0"
+              style={{ gap: '8px' }}
             >
-              {language === 'EN' ? 'हिन्दी' : 'EN'}
-            </button>
+              <img
+                src={logo}
+                alt="Gautatv Logo"
+                style={{
+                  height: '95px',
+                  width: '100px',
+                  objectFit: 'contain',
+                  objectPosition: 'center',
+                  mixBlendMode: 'multiply',
+                  filter: 'contrast(1.05)',
+                }}
+              />
+              <div className="flex flex-col leading-none">
+                <span
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    fontWeight: 700,
+                    color: '#7c2d12',
+                    fontSize: 'clamp(20px, 4vw, 34px)',
+                    whiteSpace: 'nowrap',
+                    letterSpacing: '-0.5px',
+                  }}
+                >
+                  Gau<em style={{ color: '#ea580c', fontStyle: 'italic' }}>tatv</em>
+                </span>
+                <span
+                  style={{
+                    fontFamily: "'Yatra One', cursive",
+                    color: '#c2410c',
+                    fontSize: 'clamp(9px, 1.5vw, 13px)',
+                    letterSpacing: '2px',
+                    marginTop: '2px',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  गौतत्व
+                </span>
+              </div>
+            </Link>
+
+            {/* Nav Links + Language Toggle */}
+            <div
+              className="flex items-center"
+              style={{ gap: 'clamp(10px, 3vw, 32px)', paddingRight: '16px' }}
+            >
+              {current.links.map((link) => (
+                <NavLink
+                  key={link.path}
+                  to={link.path}
+                  style={{ whiteSpace: 'nowrap', fontSize: 'clamp(11px, 1.8vw, 16px)' }}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-orange-700 font-bold border-b-2 border-orange-700 pb-1"
+                      : "text-gray-700 hover:text-orange-700 font-medium transition-all"
+                  }
+                >
+                  {link.name}
+                </NavLink>
+              ))}
+
+              <button
+                onClick={() => setLanguage(language === 'EN' ? 'HI' : 'EN')}
+                className="border border-orange-800 text-orange-800 rounded-md font-bold
+                           hover:bg-orange-800 hover:text-white transition-all"
+                style={{
+                  padding: '3px 8px',
+                  fontSize: 'clamp(10px, 1.5vw, 13px)',
+                  whiteSpace: 'nowrap',
+                  flexShrink: 0,
+                }}
+              >
+                {language === 'EN' ? 'हिन्दी' : 'EN'}
+              </button>
+            </div>
 
           </div>
-
         </div>
-      </div>
-
-    </nav>
+      </nav>
+    </>
   );
 };
 
